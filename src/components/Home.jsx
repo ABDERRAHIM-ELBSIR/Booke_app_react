@@ -6,7 +6,6 @@ import img from "../img/img.png"
 function Home() {
   return (
     <div>
-      <NavBare />
 
       <main class="main-content">
         <section class="products">
@@ -65,7 +64,6 @@ function Home() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }

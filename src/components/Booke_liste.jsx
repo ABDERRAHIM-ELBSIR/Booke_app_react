@@ -5,12 +5,8 @@ import Footer from "./Footer";
 import { useState } from 'react';
 
 
-
-
-
-
-
 const Booke_liste = () => {
+
   const [searchTerm, setSearchTerm] = useState('');
 
   const data = [

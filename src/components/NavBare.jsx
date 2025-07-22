@@ -7,19 +7,16 @@ const NavBare = () => {
     <div>
         
       <nav>
-        <Link to="/">BOOKE</Link>
+        <Link className='link' to="/">BOOKE</Link>
         <ul class="list">
           <li>
-            <Link to="/">sunup/login</Link>
+            <Link className='link' to="/">sunup/login</Link>
           </li>
           <li>
-            <Link to="/books">Books</Link>
+            <Link  className='link' to="/books">Books</Link>
           </li>
           <li>
-            <Link to="/add_booke">Add book</Link>
-          </li>
-          <li>
-            <Link to="/">Contact</Link>
+            <Link className='link' to="/">Contact</Link>
           </li>
         </ul>
       </nav>

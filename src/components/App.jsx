@@ -1,26 +1,35 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import Add_booke from "./Add_booke";
+import Add_booke from "./admin/Add_booke";
 import Booke_liste from "./Booke_liste";
 import NavBare from "./NavBare";
 import Footer from "./Footer";
+import Dashboard from "./admin/Dashbord";
+import Edite_book from "./admin/Edite_book";
+
+
 
 const App = () => {
   return (
     <div>
-      {/* <NavBare /> */}
+   
+      <BrowserRouter>   
+      <NavBare />
 
-      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Booke_liste />} />
-          {/* <Route path="contact" element={<Contact />} /> */}
           <Route path="/add_booke" element={<Add_booke />} />
-        </Routes>
+          
+          <Route path="/add_book" element={<Add_booke/>} />
+          <Route path="/dashbord" element={<Dashboard/>} />
+          <Route path="/edite_book" element={<Edite_book/>} />
+        </Routes> 
+        <Footer />
       </BrowserRouter>
       
-      {/* <Footer /> */}
+     
     </div>
   );
 };
