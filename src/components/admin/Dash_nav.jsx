@@ -5,7 +5,7 @@ const Dash_nav = () => {
 return(
       <nav class="navbar">
     <a href="#">
-      <img class="logo" src="" alt="logo"/>
+      <h1 class="home">Dashboard</h1>
     </a>
 
     <div class="toggle">
