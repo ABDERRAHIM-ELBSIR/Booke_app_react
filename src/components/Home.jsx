@@ -1,69 +1,47 @@
 import "../css/Home.css";
-import NavBare from "./NavBare";
-import Footer from "./Footer";
-import img from "../img/img.png"
+import { useEffect, useState } from "react";
 
 function Home() {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    console.log("hi");
+    fetch("/data/books_and_users.json")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setBooks(data.books);
+      })
+      .catch((error) => {
+        console.error("Failed to fetch JSON:", error);
+      });
+  }, []);
+
   return (
     <div>
-
-      <main class="main-content">
-        <section class="products">
+      <main className="main-content">
+        <section className="products">
           <h2>New Booke</h2>
           <div class="product-list">
-            <div class="product">
-              <img src= {img}  alt="Product xx" />
-              <h3>Product 1</h3>
-              <p>$10.00</p>
-            </div>
-            <div class="product">
-              <img src= {img}  alt="Product xx" />
-              <h3>Product 1</h3>
-              <p>$10.00</p>
-            </div>
-            <div class="product">
-              <img src= {img}  alt="Product xx" />
-              <h3>Product 1</h3>
-              <p>$10.00</p>
-            </div>
-            <div class="product">
-              <img src= {img}  alt="Product xx" />
-              <h3>Product 1</h3>
-              <p>$10.00</p>
-            </div>
-            <div class="product">
-              <img src= {img}  alt="Product xx" />
-              <h3>Product 1</h3>
-              <p>$10.00</p>
-            </div>
-            <div class="product">
-              <img src= {img}  alt="Product xx" />
-              <h3>Product 1</h3>
-              <p>$10.00</p>
-            </div>
-            <div class="product">
-              <img src= {img}  alt="Product xx" />
-              <h3>Product 1</h3>
-              <p>$10.00</p>
-            </div>
-            <div class="product">
-              <img src= {img}  alt="Product xx" />
-              <h3>Product 1</h3>
-              <p>$10.00</p>
-            </div>
-            <div class="product">
-              <img src= {img}  alt="Product xx" />
-              <h3>Product 1</h3>
-              <p>$10.00</p>
-            </div>
-
+            {books.slice(0,10).map((book) => {
+              return (
+                <div className="product" key={book.id}>
+                  <img src={book.photo} alt="Product photo" />
+                  <h3>{book.title}</h3>
+                  <p>{book.prix} DH</p>
+                </div>
+              );
+            })}
           </div>
           <a href="n">
             <h4>more</h4>
           </a>
         </section>
       </main>
-
     </div>
   );
 }

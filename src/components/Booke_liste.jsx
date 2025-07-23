@@ -28,7 +28,7 @@ const Booke_liste = () => {
 
   return (
     <div>
-      <NavBare />
+
       <div className="container search-table">
         <div className="search-box">
           <div className="row align-items-center">
@@ -72,7 +72,7 @@ const Booke_liste = () => {
           </table>
         </div>
       </div>
-      <Footer />
+
     </div>
   );
 };

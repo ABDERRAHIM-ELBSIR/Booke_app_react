@@ -1,0 +1,206 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "creator": "John Doe",
+      "title": "The Silent Library",
+      "photo": "/img/img.png",
+      "prix": 120
+    },
+    {
+      "id": 2,
+      "creator": "Jane Smith",
+      "title": "Beyond the Horizon",
+      "photo": "/img/img.png",
+      "prix": 90
+    },
+    {
+      "id": 3,
+      "creator": "Ahmed Alami",
+      "title": "Code of Shadows",
+      "photo": "/img/img.png",
+      "prix": 110
+    },
+    {
+      "id": 4,
+      "creator": "Sofia Lahrichi",
+      "title": "Echoes of Time",
+      "photo": "/img/img.png",
+      "prix": 85
+    },
+    {
+      "id": 5,
+      "creator": "Marc Ouali",
+      "title": "Digital Mirage",
+      "photo": "/img/img.png",
+      "prix": 130
+    },
+    {
+      "id": 6,
+      "creator": "Layla Benali",
+      "title": "Winds of the Desert",
+      "photo": "/img/img.png",
+      "prix": 95
+    },
+    {
+      "id": 7,
+      "creator": "Youssef Karim",
+      "title": "The Forgotten Path",
+      "photo": "/img/img.png",
+      "prix": 100
+    },
+    {
+      "id": 8,
+      "creator": "Amina Hariri",
+      "title": "Virtual Reality",
+      "photo": "/img/img.png",
+      "prix": 140
+    },
+    {
+      "id": 9,
+      "creator": "Noah Amrani",
+      "title": "The Last Algorithm",
+      "photo": "/img/img.png",
+      "prix": 125
+    },
+    {
+      "id": 10,
+      "creator": "Khadija Idrissi",
+      "title": "Tales of Tomorrow",
+      "photo": "/img/img.png",
+      "prix": 115
+    },
+    {
+      "id": 11,
+      "creator": "Adam Chraibi",
+      "title": "Dreamwalker",
+      "photo": "/img/img.png",
+      "prix": 88
+    },
+    {
+      "id": 12,
+      "creator": "Salma Ouazzani",
+      "title": "Broken Code",
+      "photo": "/img/img.png",
+      "prix": 105
+    },
+    {
+      "id": 13,
+      "creator": "Nabil Akram",
+      "title": "The Lost Compiler",
+      "photo": "/img/img.png",
+      "prix": 92
+    },
+    {
+      "id": 14,
+      "creator": "Fatima Zahra",
+      "title": "Binary Dreams",
+      "photo": "/img/img.png",
+      "prix": 118
+    },
+    {
+      "id": 15,
+      "creator": "Ali Belkacem",
+      "title": "Encrypted Mind",
+      "photo": "/img/img.png",
+      "prix": 135
+    },
+    {
+      "id": 16,
+      "creator": "Siham Bouzid",
+      "title": "Glitch in Time",
+      "photo": "/img/img.png",
+      "prix": 80
+    },
+    {
+      "id": 17,
+      "creator": "Reda Moussali",
+      "title": "Digital Eden",
+      "photo": "/img/img.png",
+      "prix": 112
+    },
+    {
+      "id": 18,
+      "creator": "Samira El Alaoui",
+      "title": "Codebreaker",
+      "photo": "/img/img.png",
+      "prix": 99
+    },
+    {
+      "id": 19,
+      "creator": "Mohamed Lahcen",
+      "title": "Echo Protocol",
+      "photo": "/img/img.png",
+      "prix": 122
+    },
+    {
+      "id": 20,
+      "creator": "Zineb Othmani",
+      "title": "Mind Firewall",
+      "photo": "/img/img.png",
+      "prix": 108
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "abderrahim",
+      "email": "abderrahim@example.com",
+      "login_time": "2025-07-23T18:00:00Z"
+    },
+    {
+      "id": 2,
+      "username": "amina23",
+      "email": "amina23@example.com",
+      "login_time": "2025-07-23T17:45:00Z"
+    },
+    {
+      "id": 3,
+      "username": "redacoder",
+      "email": "reda@example.com",
+      "login_time": "2025-07-23T17:30:00Z"
+    },
+    {
+      "id": 4,
+      "username": "karim_dev",
+      "email": "karim@example.com",
+      "login_time": "2025-07-23T17:00:00Z"
+    },
+    {
+      "id": 5,
+      "username": "fatimaZ",
+      "email": "fatima@example.com",
+      "login_time": "2025-07-23T16:50:00Z"
+    },
+    {
+      "id": 6,
+      "username": "noura007",
+      "email": "noura@example.com",
+      "login_time": "2025-07-23T16:40:00Z"
+    },
+    {
+      "id": 7,
+      "username": "mohamed_x",
+      "email": "mohamed@example.com",
+      "login_time": "2025-07-23T16:30:00Z"
+    },
+    {
+      "id": 8,
+      "username": "zaki_dev",
+      "email": "zaki@example.com",
+      "login_time": "2025-07-23T16:20:00Z"
+    },
+    {
+      "id": 9,
+      "username": "salma.design",
+      "email": "salma@example.com",
+      "login_time": "2025-07-23T16:10:00Z"
+    },
+    {
+      "id": 10,
+      "username": "yassine88",
+      "email": "yassine@example.com",
+      "login_time": "2025-07-23T16:00:00Z"
+    }
+  ]
+}
