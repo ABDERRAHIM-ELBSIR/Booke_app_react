@@ -28,8 +28,6 @@
     display: block;
   }
 }
-
-/* Fonts and colors */
 .dashboard h2 {
   font-size: 20px;
 }
@@ -38,6 +36,55 @@
   font-size: 25px;
   margin-bottom: 15px;
 }
+.dashboard button {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+
+  padding: 6px 16px;
+
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.dashboard button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.dashboard button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.dashboard button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.dashboard button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
 .dashboard p {
   color: rgba(0,0,0,0.5);
   font-size: 16px;
@@ -46,7 +93,7 @@
   border-radius: 50%;
  
 }
-.dashboard .btn {
+.dashboard .button {
   border-radius: 5px;
   border: none;
   width: 100%;
@@ -64,3 +111,5 @@
 .main p {
   margin-bottom: 30px;
 }
+
+
