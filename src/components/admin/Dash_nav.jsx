@@ -6,11 +6,6 @@ const Dash_nav = () => {
 
 
 
-
-
-
-
-
   return (
     <nav class="navbar">
       <Link to="/dashbord">

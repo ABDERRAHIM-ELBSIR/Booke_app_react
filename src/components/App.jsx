@@ -13,42 +13,60 @@ import ContactPaje from "./ContactPaje";
 import { useState, useEffect } from "react";
 
 const App = () => {
-  // const [users, setUser] = useState([]);
-  // useEffect(() => {
-  //   fetch("../data/users.json")// rwad ortiga ist hlkr arkir d sis owror sgadart
-  //     .then((res) => {
-  //       if (!res.ok) {
-  //         throw new Error("sumthing wrong");
-  //       }
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       setUser(data.users);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Failed to fetch JSON:", error);
-  //     });
-  // }, []);
+  const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    fetch("/data/books_and_users.json")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("sumthing wrong");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setUsers(data.users);
+      })
+      .catch((error) => {
+        console.error("Failed to fetch JSON:", error);
+      });
+  }, []);
+
+  // Login handler
+  const handleLogin = (email, password) => {
+    const foundUser = users.find(
+      (u) => u.email === email && u.password === password
+    );
+    if (foundUser) {
+      setCurrentUser(foundUser);
+      console.log(currentUser);
+      return true;
+    }
+    return false;
+  };
 
   return (
     <div>
       <BrowserRouter>
-        {/* <NavBare /> */}
-        <Dash_nav/>
-
+         <NavBare />
         <Routes>
+       
+
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Booke_liste />} />
-          <Route path="/login" element={<LoginPaje />} />
+          <Route path="/login" element={<LoginPaje onLogin={handleLogin} />} />
           <Route path="/contact" element={<ContactPaje />} />
 
-          <Route path="/add_booke" element={<Add_booke />} />
-
-          <Route path="/add_book" element={<Add_booke />} />
-          <Route path="/dashbord" element={<Dashboard />} />
-          <Route path="/edite_book" element={<Edite_book />} />
+          {currentUser?.role === "admin" && (
+            <>
+              <Route path="/add_booke" element={<Add_booke />} />
+              <Route path="/add_book" element={<Add_booke />} />
+              <Route path="/dashbord" element={<Dashboard />} />
+              <Route path="/edite_book" element={<Edite_book />} />
+            </>
+          )}
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   );

@@ -1,19 +1,25 @@
 import React, { useState } from "react";
-import "../css/Login.css"; 
+import "../css/Login.css";
 
-const LoginPaje = () => {
+import { useNavigate } from "react-router-dom";
+const LoginPaje = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
     alert(`Email: ${email}\nPassword: ${password}`);
+    const success = onLogin(email, password);
+    if (success) {
+      navigate("/dashbord");
+    } else {
+      console.log("Invalid email or password");
+    }
   };
 
-
   return (
-     <div className="login-container">
+    <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <div className="form-group">
@@ -40,7 +46,7 @@ const LoginPaje = () => {
         <button type="submit">sugnup</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default LoginPaje
+export default LoginPaje;

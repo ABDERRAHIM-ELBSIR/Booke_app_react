@@ -141,76 +141,86 @@
       "prix": 108
     }
   ],
-   "users": [
-    {
-      "id": 1,
-      "username": "abderrahim",
-      "email": "abderrahim@example.com",
-      "login_time": "2025-07-23T18:00:00Z",
-      "role": "admin"
-    },
-    {
-      "id": 2,
-      "username": "amina23",
-      "email": "amina23@example.com",
-      "login_time": "2025-07-23T17:45:00Z",
-      "role": "folower"
-    },
-    {
-      "id": 3,
-      "username": "redacoder",
-      "email": "reda@example.com",
-      "login_time": "2025-07-23T17:30:00Z",
-      "role": "folower"
-    },
-    {
-      "id": 4,
-      "username": "karim_dev",
-      "email": "karim@example.com",
-      "login_time": "2025-07-23T17:00:00Z",
-      "role": "folower"
-    },
-    {
-      "id": 5,
-      "username": "fatimaZ",
-      "email": "fatima@example.com",
-      "login_time": "2025-07-23T16:50:00Z",
-      "role": "folower"
-    },
-    {
-      "id": 6,
-      "username": "noura007",
-      "email": "noura@example.com",
-      "login_time": "2025-07-23T16:40:00Z",
-      "role": "folower"
-    },
-    {
-      "id": 7,
-      "username": "mohamed_x",
-      "email": "mohamed@example.com",
-      "login_time": "2025-07-23T16:30:00Z",
-      "role": "folower"
-    },
-    {
-      "id": 8,
-      "username": "zaki_dev",
-      "email": "zaki@example.com",
-      "login_time": "2025-07-23T16:20:00Z",
-      "role": "folower"
-    },
-    {
-      "id": 9,
-      "username": "salma.design",
-      "email": "salma@example.com",
-      "login_time": "2025-07-23T16:10:00Z",
-      "role": "folower"
-    },
-    {
-      "id": 10,
-      "username": "yassine88",
-      "email": "yassine@example.com",
-      "login_time": "2025-07-23T16:00:00Z",
-      "role": "folower"
-    }
-  ]
+"users": [
+  {
+    "id": 1,
+    "username": "abderrahim",
+    "email": "abderrahim@example.com",
+    "password": "admin123",
+    "login_time": "2025-07-23T18:00:00Z",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "username": "amina23",
+    "email": "amina23@example.com",
+    "password": "amina123",
+    "login_time": "2025-07-23T17:45:00Z",
+    "role": "folower"
+  },
+  {
+    "id": 3,
+    "username": "redacoder",
+    "email": "reda@example.com",
+    "password": "reda123",
+    "login_time": "2025-07-23T17:30:00Z",
+    "role": "folower"
+  },
+  {
+    "id": 4,
+    "username": "karim_dev",
+    "email": "karim@example.com",
+    "password": "karim123",
+    "login_time": "2025-07-23T17:00:00Z",
+    "role": "folower"
+  },
+  {
+    "id": 5,
+    "username": "fatimaZ",
+    "email": "fatima@example.com",
+    "password": "fatima123",
+    "login_time": "2025-07-23T16:50:00Z",
+    "role": "folower"
+  },
+  {
+    "id": 6,
+    "username": "noura007",
+    "email": "noura@example.com",
+    "password": "noura123",
+    "login_time": "2025-07-23T16:40:00Z",
+    "role": "folower"
+  },
+  {
+    "id": 7,
+    "username": "mohamed_x",
+    "email": "mohamed@example.com",
+    "password": "mohamed123",
+    "login_time": "2025-07-23T16:30:00Z",
+    "role": "folower"
+  },
+  {
+    "id": 8,
+    "username": "zaki_dev",
+    "email": "zaki@example.com",
+    "password": "zaki123",
+    "login_time": "2025-07-23T16:20:00Z",
+    "role": "folower"
+  },
+  {
+    "id": 9,
+    "username": "salma.design",
+    "email": "salma@example.com",
+    "password": "salma123",
+    "login_time": "2025-07-23T16:10:00Z",
+    "role": "folower"
+  },
+  {
+    "id": 10,
+    "username": "yassine88",
+    "email": "yassine@example.com",
+    "password": "yassine123",
+    "login_time": "2025-07-23T16:00:00Z",
+    "role": "folower"
+  }
+]
 }
