@@ -2,33 +2,38 @@ import React from "react";
 import "../css/Book_List.css";
 import NavBare from "./NavBare";
 import Footer from "./Footer";
-import { useState } from 'react';
-
+import { useState, useEffect } from "react";
 
 const Booke_liste = () => {
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const [books, setBooks] = useState([]);
 
-  const data = [
-    { title: 'HTML', category: 'Web Development' },
-    { title: 'PHP', category: 'Web Development' },
-    { title: 'C#', category: 'Programming Language' },
-    { title: 'JavaScript', category: 'Web Development' },
-    { title: 'Bootstrap', category: 'Web Design' },
-    { title: 'Python', category: 'Programming Language' },
-    { title: 'Android', category: 'App Development' },
-    { title: 'Angular JS', category: 'Web Development' },
-  ];
+  useEffect(() => {
+    fetch("/data/books_and_users.json")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("sumthing wrong");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setBooks(data.books);
+      })
+      .catch((error) => {
+        console.error("Failed to fetch JSON:", error);
+      });
+  }, []);
 
-  const filteredData = data.filter((item) =>
-    Object.values(item).some((val) =>
-      val.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  );
+
+  const filteredData = books.filter((item) =>
+  Object.values(item).some((val) =>
+    String(val).toLowerCase().includes(searchTerm.toLowerCase())
+  )
+);
 
   return (
     <div>
-
       <div className="container search-table">
         <div className="search-box">
           <div className="row align-items-center">
@@ -39,7 +44,7 @@ const Booke_liste = () => {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Search all fields e.g. HTML"
+                placeholder="Search all books"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -52,7 +57,8 @@ const Booke_liste = () => {
             <thead>
               <tr>
                 <th>Title</th>
-                <th>Category</th>
+                <th>creator</th>
+                <th>prix</th>
               </tr>
             </thead>
             <tbody>
@@ -60,7 +66,8 @@ const Booke_liste = () => {
                 filteredData.map((item, index) => (
                   <tr key={index}>
                     <td>{item.title}</td>
-                    <td>{item.category}</td>
+                    <td>{item.creator}</td>
+                    <td>{item.prix}</td>
                   </tr>
                 ))
               ) : (
@@ -72,7 +79,6 @@ const Booke_liste = () => {
           </table>
         </div>
       </div>
-
     </div>
   );
 };

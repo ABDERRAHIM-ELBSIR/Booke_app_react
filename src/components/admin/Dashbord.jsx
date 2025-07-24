@@ -1,11 +1,33 @@
 import React from "react";
 import "../../css/admin/dashbord.css";
 import Dash_nav from './Dash_nav'
+import { useState,useEffect } from "react"; 
 
 const Dashboard = () => {
+
+ const [users, setUser]= useState([]);
+ const [books, setBooks]= useState([]);
+
+    useEffect(() => {
+      fetch("/data/books_and_users.json")
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setBooks(data.books);
+          setUser(data.users);
+        })
+        .catch((error) => {
+          console.error("Failed to fetch JSON:", error);
+        });
+    }, []);
   return (
     <div>   
       <Dash_nav/> 
+      
       <div className="container">
       <div className="dashboard">
         <div className="dashboard-card main">
